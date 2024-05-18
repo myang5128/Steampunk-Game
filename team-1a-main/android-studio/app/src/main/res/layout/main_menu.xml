@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/steampunkYellow"
+    tools:context=".view.MainMenu">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/statsArea"
+            android:layout_width="412dp"
+            android:layout_height="142dp"
+            android:layout_marginStart="16dp"
+            android:paddingStart="32sp"
+            android:paddingEnd="32sp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/dialogueArea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/healthText2"
+                android:layout_width="match_parent"
+                android:textColor="@color/steampunkBlue"
+                android:layout_height="22dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/trade_winds"
+                android:text="@string/healthText" />
+
+            <TextView
+                android:id="@+id/armorText2"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/steampunkBlue"
+                android:fontFamily="@font/trade_winds"
+                android:text="@string/armorText" />
+
+            <TextView
+                android:id="@+id/gearText2"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/steampunkBlue"
+                android:fontFamily="@font/trade_winds"
+                android:text="@string/gearText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialogueArea"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/buttonSelection"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statsArea">
+
+            <TextView
+                android:id="@+id/mainMenuDialogueText"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/trade_winds"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="16sp"
+                android:textSize="16sp"
+                android:textColor="@color/steampunkBlue"
+                android:text="@string/mainMenuDialogueText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonSelection"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0sp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="64sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogueArea">
+
+            <Button
+                android:id="@+id/continueBTN"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginBottom="16sp"
+                android:fontFamily="@font/trade_winds"
+                android:backgroundTint="@color/steampunkBlue"
+                android:textColor="@color/steampunkYellow"
+                android:textSize="20sp"
+                android:text="@string/continueBTN"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/storeBTN"
+                android:layout_width="match_parent"
+                android:textColor="@color/steampunkYellow"
+                android:layout_height="75dp"
+                android:text="@string/storeBTN"
+                android:textSize="20sp"
+                android:fontFamily="@font/trade_winds"
+                android:backgroundTint="@color/steampunkBlue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
